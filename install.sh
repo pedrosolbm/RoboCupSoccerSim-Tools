@@ -201,6 +201,10 @@ INSTALL_MONITOR(){
 	
 					sudo make -j $(cat /proc/cpuinfo | grep processor | wc -l) install;
 					cd ..;
+					
+					echo "";
+					echo "$SERVER$SERVER_VERSION$SERVER_FORMAT was successfully installed!";
+					echo "";
 			fi
 		else
 			echo "$MONITOR$MONITOR_VERSION already installed!"
