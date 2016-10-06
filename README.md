@@ -6,5 +6,7 @@ Esse repositório tem o objetivo de ajudar iniciantes a instalar as ferramentas 
 $ ./install.sh
 </code></pre>
 
+#teste
 Distros funcionais:
 <p>Ubuntu 16.04</p>
+
