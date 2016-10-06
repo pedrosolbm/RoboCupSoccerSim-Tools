@@ -13,7 +13,7 @@ $ ./install.sh
 
 <p>Para desinstalar, basta dar permissão de execução ao script de desinstalação e executar o mesmo</p>
 <pre><code>$ chmod +x install.sh
-$ ./unninstall.sh
+$ ./uninstall.sh
 </code></pre>
 
 Distros Funcionais
