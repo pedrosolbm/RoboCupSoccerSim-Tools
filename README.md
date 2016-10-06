@@ -7,14 +7,14 @@ Configurando RCSS-TOOLS
 </code>
 
 <p>Para instalar, dar permissão de execução ao script de instalação e executar o mesmo</p>
-<pre><code>$ chmod +x install.sh
+<code>$ chmod +x install.sh
 $ ./install.sh
-</code></pre>
+</code>
 
 <p>Para desinstalar, basta dar permissão de execução ao script de desinstalação e executar o mesmo</p>
-<pre><code>$ chmod +x install.sh
+<code>$ chmod +x install.sh
 $ ./unninstall.sh
-</code></pre>
+</code>
 
 Distros Funcionais
 ------------------------
