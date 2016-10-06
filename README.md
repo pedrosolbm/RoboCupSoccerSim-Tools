@@ -3,6 +3,9 @@ Esse repositório tem o objetivo de ajudar iniciantes a instalar as ferramentas 
 
 Configurando RCSS-TOOLS
 ------------------------
+<code>git clone https://github.com/pedrosolbm/RoboCupSoccerSim-Tools.git
+</code>
+
 <p>Para instalar, dar permissão de execução ao script de instalação e executar o mesmo</p>
 <pre><code>$ chmod +x install.sh
 $ ./install.sh
