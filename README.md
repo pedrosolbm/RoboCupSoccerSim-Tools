@@ -7,4 +7,4 @@ $ ./install.sh
 </code></pre>
 
 Distros funcionais:
-Ubuntu 16.04
+<p>Ubuntu 16.04</p>
