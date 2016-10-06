@@ -8,8 +8,9 @@ $ cd RoboCupSoccerSim-Tools/
 $ ./install.sh
 </code></pre>
 
-<p>Para desinstalar, basta dar permissão de execução ao script de desinstalação e executar o mesmo</p>$ ./uninstall.sh
-</code></pre>
+<p>Para desinstalar, basta dar permissão de execução ao script de desinstalação e executar o mesmo</p>
+<code>$ ./uninstall.sh
+</code>
 
 Distros Funcionais
 ------------------------
