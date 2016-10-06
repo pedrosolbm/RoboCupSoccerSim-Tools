@@ -3,5 +3,5 @@ Esse repositório tem o objetivo de ajudar iniciantes a instalar as ferramentas 
 
 1. Dar permissão de execução ao script de instalação
 
-chmod +x install.sh \n
+chmod +x install.sh <br />
 ./install.sh
