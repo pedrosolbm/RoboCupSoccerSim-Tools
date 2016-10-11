@@ -4,16 +4,17 @@ alias sleep='/bin/sleep';
 WORK_PATH="/usr/src/rcss-tools/";
 sudo mkdir -vp "$WORK_PATH";
 sudo updatedb
+
 MAIN_MESSAGE(){
 	echo "--------------------------------------------------------------------------";
-	echo "Installing RoboCup Soccer Simulator Tools";
+	echo "Instalando dependencias para RoboCup Soccer Simulator";
 	echo -e "--------------------------------------------------------------------------\n";
 	sleep 1;
 }
 
 UPDATE_UBUNTU_16_04 (){
 #Instala todas as dependencias necessarias para a configuração e instalação dos componentes do RCSS-TOOLS
-	DEPS="automake -j $(cat /proc/cpuinfo | grep processor | wc -l) autoconf libtool g++ flex libboost-all-dev libqt4-dev zlib1g-dev libglib2.0-dev libaudio-dev libxt-dev libpng12-dev libxi-dev libxrender-dev libfontconfig1-dev"
+	DEPS="automake -j $(cat /proc/cpuinfo | grep processor | wc -l) autoconf libtool g++ flex libboost-all-dev libqt4-dev zlib1g-dev libglib2.0-dev libaudio-dev libxt-dev libpng12-dev libxi-dev libxrender-dev libfontconfig1-dev libclang1-3.6"
 	echo "";
 	echo "sudo apt-get update && upgrade";
 	echo "";
@@ -29,7 +30,7 @@ UPDATE_UBUNTU_16_04 (){
 	sudo apt-get install -y "$DEPS";
 
 	echo "--------------------------------------------------------------------------";
-	echo "RoboCup Soccer Simulation Enviroment was successfully installed!";
+	echo "Dependências para RoboCup Soccer Simulation foram instaladas!";
 	echo -e "--------------------------------------------------------------------------\n";
 
 
@@ -43,7 +44,7 @@ INSTALL_LIBRCSC(){
 	LIB_FORMAT=".tar.gz"
 	
 	echo "--------------------------------------------------------------------------"
-	echo "Installing librcsc"
+	echo "Instalando librcsc"
 	echo "--------------------------------------------------------------------------"
 	sleep 1;
 	if [ "$INSTALLED" -eq 0 ]
@@ -52,26 +53,26 @@ INSTALL_LIBRCSC(){
 			then
 
 				echo ""
-				echo "File [$LIB$LIB_VERISON$LIB_FORMAT] found."
-				echo "Configuring $LIB$LIB_VERSION.."
+				echo "File [$LIB$LIB_VERISON$LIB_FORMAT] Encontrado."
+				echo "Configurando $LIB$LIB_VERSION.."
 				echo ""
 				sleep 1;
 				
 				sudo tar -xzf $WORK_PATH$LIB$LIB_VERSION$LIB_FORMAT;
 				cd $WORK_PATH$LIB$LIB_VERSION;
 				sudo ./configure
-				sudo make -j $(cat /proc/cpuinfo | grep processor | wc -l) install;
+				sudo make install;
 				cd ..;
 				
 				echo "";
-				echo "$LIB$LIB_VERSION was successfully installed!";
+				echo "$LIB$LIB_VERSION instalado com sucesso.";
 				echo "";
 
 			else
 
-				echo "File [$LIB$LIB_VERSION$LIB_FORMAT] not found."
+				echo "File [$LIB$LIB_VERSION$LIB_FORMAT] não encontrado."
 				sleep 1;
-				echo "Starting [$LIB$LIB_VERSION$LIB_FORMAT] download.."
+				echo "Iniciando download [$LIB$LIB_VERSION$LIB_FORMAT]"
 				sleep 1;
 
 				sudo wget -q --show-progress http://c3sl.dl.osdn.jp/rctools/51941/librcsc-4.1.0.tar.gz
@@ -84,15 +85,15 @@ INSTALL_LIBRCSC(){
 				sudo tar -xzf $LIB$LIB_VERSION$LIB_FORMAT;
 				cd $LIB$LIB_VERSION;
 				sudo ./configure
-				sudo make -j $(cat /proc/cpuinfo | grep processor | wc -l) install;
+				sudo make install;
 				cd ..;
 
 				echo "";
-				echo "$LIB$LIB_VERSION was successfully installed!";
+				echo "$LIB$LIB_VERSION instalado com sucesso.";
 				echo "";
 		fi
 		else
-			echo "$LIB$LIB_VERSION already installed!"
+			echo "$LIB$LIB_VERSION já existe."
 	fi
 }
 	
@@ -103,7 +104,7 @@ INSTALL_SERVER(){
 	SERVER_FORMAT=".tar.gz"
 
 	echo "--------------------------------------------------------------------------";
-	echo "Configuring rcssserver";
+	echo "Instalando rcssserver";
 	echo "--------------------------------------------------------------------------";
 	echo "";
 	sleep 1;
@@ -113,41 +114,41 @@ INSTALL_SERVER(){
 				then
 
 					echo "";
-					echo "File [$SERVER$SERVER_VERSION$SERVER_FORMAT] found."
+					echo "File [$SERVER$SERVER_VERSION$SERVER_FORMAT] encontrado."
 					sleep 1;
-					echo "Configuring $SERVER$SERVER_VERSION.."
+					echo "Configurando $SERVER$SERVER_VERSION.."
 					echo "";
 					sleep 1;
 
 					sudo tar -xzf $SERVER$SERVER_VERSION$SERVER_FORMAT;
 					cd $SERVER$SERVER_VERSION;
-					sudo make -j $(cat /proc/cpuinfo | grep processor | wc -l) clean;
 					sudo ./configure
-					sudo make -j $(cat /proc/cpuinfo | grep processor | wc -l) install;
+					sudo make install;
 					cd ..;
 
 				else
 
-					echo "File [$SERVER$SERVER_VERSION$SERVER_FORMAT] not found"
+					echo "File [$SERVER$SERVER_VERSION$SERVER_FORMAT] não encontrado"
 					sleep 1;			
-					echo "Starting [$SERVER$SERVER_VERSION$SERVER_FORMAT] download.."
+					echo "Iniciando download [$SERVER$SERVER_VERSION$SERVER_FORMAT]"
 					sleep 1;
 
 					sudo wget -q --show-progress http://ufpr.dl.sourceforge.net/project/sserver/rcssserver/15.3.0/rcssserver-15.3.0.tar.gz
 					
 					sudo tar -xzf $SERVER$SERVER_VERSION$SERVER_FORMAT;
 					cd $SERVER$SERVER_VERSION;
-					sudo make -j $(cat /proc/cpuinfo | grep processor | wc -l) clean;
 					sudo ./configure
-					sudo make -j $(cat /proc/cpuinfo | grep processor | wc -l) install;
+					sudo make install;
 					cd ..;
 
-					echo "";
-					echo "$SERVER$SERVER_VERSION$SERVER_FORMAT was successfully installed!";
-					echo "";
 			fi
+
+				echo "";
+				echo "$SERVER$SERVER_VERSION$SERVER_FORMAT instalado com sucesso.";
+				echo "";
+
 			else
-					echo "$SERVER$SERVER_VERSION was successfully installed!";
+				echo "$SERVER$SERVER_VERSION já instalado";
 	fi	
 }
 
@@ -159,7 +160,7 @@ INSTALL_MONITOR(){
 	MONITOR_FORMAT=".tar.gz"
 
 	echo "--------------------------------------------------------------------------";
-	echo "Configuring rcsmonitor";
+	echo "Instalando rcsmonitor";
 	echo "--------------------------------------------------------------------------";
 	echo "";
 	sleep 1;
@@ -169,9 +170,9 @@ INSTALL_MONITOR(){
 				then
 					
 					echo "";
-					echo "File [$MONITOR$MONITOR_VERSION$MONITOR_FORMAT] found."
+					echo "File [$MONITOR$MONITOR_VERSION$MONITOR_FORMAT] encontrado."
 					sleep 1;
-					echo "Configuring $SERVER$SERVER_VERSION.."
+					echo "Configurando $SERVER$SERVER_VERSION.."
 					echo "";
 					sleep 1;
 
@@ -186,9 +187,9 @@ INSTALL_MONITOR(){
 
 				else
 					
-					echo "File [$MONITOR$MONITOR_VERSION$MONITOR_FORMAT] not found"
+					echo "File [$MONITOR$MONITOR_VERSION$MONITOR_FORMAT] não encontrado"
 					sleep 1;			
-					echo "Starting [$MONITOR$MONITOR_VERSION$MONITOR_FORMAT] download.."
+					echo "Iniciando download [$MONITOR$MONITOR_VERSION$MONITOR_FORMAT]"
 					sleep 1;
 
 					sudo wget -q --show-progress http://tenet.dl.sourceforge.net/project/sserver/rcssmonitor/15.2.0/rcssmonitor-15.2.0.tar.gz;
@@ -203,15 +204,12 @@ INSTALL_MONITOR(){
 					cd ..;
 					
 					echo "";
-					echo "$SERVER$SERVER_VERSION$SERVER_FORMAT was successfully installed!";
+					echo "$SERVER$SERVER_VERSION$SERVER_FORMAT instalado com sucesso.";
 					echo "";
 			fi
 		else
-			echo "$MONITOR$MONITOR_VERSION already installed!"
+			echo "$MONITOR$MONITOR_VERSION já instalado"
 	fi
-
-
-
 }
 
 MAIN_MESSAGE;
