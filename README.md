@@ -34,7 +34,7 @@ Caso o arquivo não tenha permissão para ser executado, conceda permissão de e
 
 Desinstalando RCSS-TOOLS
 ------------------------
-Para desinstalar o RCSS-TOOLS basta executar <code>./uninstall.sh</code>
+Para desinstalar o RCSS-TOOLS basta executar <code>./uninstall.sh</code> que ele removerá todos os arquivos e pastas criados na instalação
 
 Caso o arquivo não tenha permissão para ser executado, conceda permissão de execução para o arquivo usando o comando <code>chmod +x uninstall.sh</code> e execute novamete: <code>./uninstall.sh</code>
 
