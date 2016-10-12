@@ -5,6 +5,7 @@ WORK_PATH="/usr/src/rcss-tools/";
 sudo mkdir -vp "$WORK_PATH";
 sudo updatedb
 
+
 MAIN_MESSAGE(){
 	echo "--------------------------------------------------------------------------";
 	echo "Instalando dependencias para RoboCup Soccer Simulator";
@@ -42,7 +43,11 @@ INSTALL_LIBRCSC(){
 	LIB="librcsc-"
 	LIB_VERSION="4.1.0"
 	LIB_FORMAT=".tar.gz"
-	
+
+	LIB_PATH="/etc/ld.so.conf"
+	LIB_SHARE="include /usr/local/share"
+
+
 	echo "--------------------------------------------------------------------------"
 	echo "Instalando librcsc"
 	echo "--------------------------------------------------------------------------"
@@ -67,6 +72,7 @@ INSTALL_LIBRCSC(){
 				echo "";
 				echo "$LIB$LIB_VERSION instalado com sucesso.";
 				echo "";
+				sudo echo -e "$LIB_SHARE" | sudo tee -a $LIB_PATH
 
 			else
 
@@ -91,10 +97,12 @@ INSTALL_LIBRCSC(){
 				echo "";
 				echo "$LIB$LIB_VERSION instalado com sucesso.";
 				echo "";
+				sudo echo -e "$LIB_SHARE" | sudo tee -a $LIB_PATH
 		fi
 		else
 			echo "$LIB$LIB_VERSION já existe."
 	fi
+
 }
 	
 INSTALL_SERVER(){
@@ -178,7 +186,7 @@ INSTALL_MONITOR(){
 
 					sudo tar -xzf $MONITOR$MONITOR_VERSION$MONITOR_FORMAT;
 					cd $MONITOR$MONITOR_VERSION;
-					make -j $(cat /proc/cpuinfo | grep processor | wc -l) clean;
+					sudo make -j $(cat /proc/cpuinfo | grep processor | wc -l) clean;
 					./configure
 					sudo sed -i 's/-pthread-lQtGui/-pthread -lQtGui/' config.status* && echo "-pthread-lQtGui CORRIDO!"
 			
