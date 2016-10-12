@@ -38,9 +38,10 @@ Para desinstalar o RCSS-TOOLS basta executar <code>./uninstall.sh</code>
 
 Caso o arquivo não tenha permissão para ser executado, conceda permissão de execução para o arquivo usando o comando <code>chmod +x uninstall.sh</code> e execute novamete: <code>./uninstall.sh</code>
 
-
 Distribuições Compatíveis
 -------------------------
 - [x] Ubuntu 16.04
 
+Agradecimentos
+--------------
 Obrigado, [@hebertluiz](https://github.com/hebertluiz) pela ajuda para montar o script!
