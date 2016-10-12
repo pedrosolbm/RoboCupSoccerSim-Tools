@@ -42,3 +42,5 @@ Caso o arquivo não tenha permissão para ser executado, conceda permissão de e
 Distribuições Compatíveis
 -------------------------
 - [x] Ubuntu 16.04
+
+Obrigado, @hebertluiz pela ajuda para montar o script!
