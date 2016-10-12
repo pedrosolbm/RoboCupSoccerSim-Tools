@@ -41,4 +41,4 @@ Caso o arquivo não tenha permissão para ser executado, conceda permissão de e
 
 Distribuições Compatíveis
 -------------------------
--Ubuntu 16.04
+- [x] Ubuntu 16.04
