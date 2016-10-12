@@ -43,4 +43,4 @@ Distribuições Compatíveis
 -------------------------
 - [x] Ubuntu 16.04
 
-Obrigado, @hebertluiz pela ajuda para montar o script!
+Obrigado, [links](@hebertluiz) pela ajuda para montar o script!
