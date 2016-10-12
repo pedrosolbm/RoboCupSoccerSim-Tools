@@ -2,6 +2,26 @@
 # RoboCupSoccerSim-Tools
 Esse repositório tem o objetivo de ajudar iniciantes a instalar as ferramentas e dependências necessárias para a RoboCup Soccer Simulation
 
+Dependências necessárias
+-------------------------
+Estas são todas as dependências necessárias e automaticamente instaladas pelo script de instalação
+* automake
+* autoconf
+* libtool
+* g++
+* flex
+* libboost-all-dev
+* libqt4-dev zlib1g-dev
+* libglib2.0-dev
+* libaudio-dev
+* libxt-dev
+* libpng12-dev
+* libxi-dev
+* libxrender-dev
+* libfontconfig1-dev
+* libclang1-3.6
+
+
 Configurando e Instalando RCSS-TOOLS
 ------------------------------------
 Para instalar o ambiente RCSS basta copiar e colar os comandos a baixo num terminal com diretório de sua escolha
