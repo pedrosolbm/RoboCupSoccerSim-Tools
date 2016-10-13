@@ -7,6 +7,7 @@ Componentes instalados
 
 Componentes | Descrição
 -----------|-----------
+librcsc | Lib utilizada para a configuração do servidor
 rcssserver | Servidor que faz a conexão entre os times e o monitor
 rcssmonitor | Monitor do jogo
 
