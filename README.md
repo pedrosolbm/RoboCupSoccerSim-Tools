@@ -4,6 +4,7 @@ Esse repositório tem o objetivo de ajudar iniciantes a instalar as ferramentas 
 
 Componentes
 -----------
+Os são instalados na no diretório <code>/usr/src/rcss-tools/</code>. É possível mudar isso alterando o diretório na variável WORK-PATH no script <code>install.sh</code>
 
 Componentes | Descrição
 -----------|-----------
