@@ -6,7 +6,7 @@ Componentes instalados
 ----------------------
 
 Componentes | Descrição
-----------------------
+-----------|-----------
 rcssserver | Servidor que faz a conexão entre os times e o monitor
 rcssmonitor | Monitor do jogo
 
