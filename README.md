@@ -7,9 +7,9 @@ Componentes instalados
 
 Componentes | Descrição
 -----------|-----------
-librcsc | Lib utilizada para a configuração do servidor
-rcssserver | Servidor que faz a conexão entre os times e o monitor
-rcssmonitor | Monitor do jogo
+librcsc 4.1.0| Lib utilizada para a configuração do servidor
+rcssserver 15.3.0 | Servidor que faz a conexão entre os times e o monitor
+rcssmonitor 15.2.0| Monitor do jogo
 
 Dependências necessárias
 -------------------------
