@@ -2,6 +2,14 @@
 # RoboCupSoccerSim-Tools
 Esse repositório tem o objetivo de ajudar iniciantes a instalar as ferramentas e dependências necessárias para a RoboCup Soccer Simulation
 
+Componentes instalados
+----------------------
+
+Componentes | Descrição
+----------------------
+rcssserver | Servidor que faz a conexão entre os times e o monitor
+rcssmonitor | Monitor do jogo
+
 Dependências necessárias
 -------------------------
 Estas são todas as dependências necessárias e automaticamente instaladas pelo script de instalação
