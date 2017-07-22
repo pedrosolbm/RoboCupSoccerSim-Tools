@@ -24,7 +24,7 @@ UPDATE_UBUNTU_16_04 (){
 	sudo apt-get update && sudo apt-get upgrade -y;
 
 	echo "";
-	echo "sudo apt-get intall -y $DEPS";
+	echo "sudo apt-get install -y $DEPS";
 	echo "";
 	sleep 1;
 
