@@ -81,7 +81,7 @@ INSTALL_LIBRCSC(){
 				echo "Iniciando download [$LIB$LIB_VERSION$LIB_FORMAT]"
 				sleep 1;
 
-				sudo wget -q --show-progress http://c3sl.dl.osdn.jp/rctools/51941/librcsc-4.1.0.tar.gz
+				sudo wget --progress=bar http://c3sl.dl.osdn.jp/rctools/51941/librcsc-4.1.0.tar.gz
 				
 				echo "";
 				echo "Configuring $LIB$LIB_VERSION";
@@ -141,7 +141,7 @@ INSTALL_SERVER(){
 					echo "Iniciando download [$SERVER$SERVER_VERSION$SERVER_FORMAT]"
 					sleep 1;
 
-					sudo wget -q --show-progress http://ufpr.dl.sourceforge.net/project/sserver/rcssserver/15.3.0/rcssserver-15.3.0.tar.gz
+					sudo wget --progress=bar http://ufpr.dl.sourceforge.net/project/sserver/rcssserver/15.3.0/rcssserver-15.3.0.tar.gz
 					
 					sudo tar -xzf $SERVER$SERVER_VERSION$SERVER_FORMAT;
 					cd $SERVER$SERVER_VERSION;
@@ -200,7 +200,7 @@ INSTALL_MONITOR(){
 					echo "Iniciando download [$MONITOR$MONITOR_VERSION$MONITOR_FORMAT]"
 					sleep 1;
 
-					sudo wget -q --show-progress http://tenet.dl.sourceforge.net/project/sserver/rcssmonitor/15.2.0/rcssmonitor-15.2.0.tar.gz;
+					sudo wget --progress=bar http://tenet.dl.sourceforge.net/project/sserver/rcssmonitor/15.2.0/rcssmonitor-15.2.0.tar.gz;
 
 					sudo tar -xzf $MONITOR$MONITOR_VERSION$MONITOR_FORMAT;
 					cd $MONITOR$MONITOR_VERSION;
