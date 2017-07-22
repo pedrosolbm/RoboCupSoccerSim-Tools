@@ -15,7 +15,7 @@ MAIN_MESSAGE(){
 
 UPDATE_UBUNTU_16_04 (){
 #Instala todas as dependencias necessarias para a configuração e instalação dos componentes do RCSS-TOOLS
-	DEPS="automake -j $(cat /proc/cpuinfo | grep processor | wc -l) autoconf libtool g++ flex libboost-all-dev libqt4-dev zlib1g-dev libglib2.0-dev libaudio-dev libxt-dev libpng12-dev libxi-dev libxrender-dev libfontconfig1-dev libclang1-3.6 bison"
+	DEPS="automake -j $(cat /proc/cpuinfo | grep processor | wc -l) autoconf libtool g++ flex libboost-all-dev libqt4-dev zlib1g-dev libglib2.0-dev libaudio-dev libxt-dev libpng12-dev libxi-dev libxrender-dev libfontconfig1-dev libclang1-3.6 bison++"
 	echo "";
 	echo "sudo apt-get update && upgrade";
 	echo "";
